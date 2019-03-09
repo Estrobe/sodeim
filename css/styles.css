@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box
+}
+
+
+
+
+#app {
+    width: 950px;
+    margin: auto;
+    
+}
+
+.currency-container, .producers-container {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.sodaCompanies-currency, .vendingMachines-currency, .endorsements-currency {
+    width: 300px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 40px;
+}
+
+.generators-container {
+    display:flex;
+    flex-direction: column;
+    margin-top: 40px;
+    
+}
+
+.generator {
+    border: 1px solid black;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+}
+
+.generator-cost {
+    display: block;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+  }
+
+#buy-button {
+    color: #F9f7f3;
+  background: #0FA3B1;
+  padding: 10px 30px;
+  text-decoration: none; 
+  transition: background .5s;
+}
+#addgen-button {
+    color: #000;
+    background: #eddea4 ;
+    padding: 10px 40px;
+    text-decoration: none; 
+    transition: background .5s;
+}
