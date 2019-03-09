@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>
+        Sodeim
+    </title>
+</head>
+
+<body>
+    
+    <div id="app">
+
+
+        <div class="currency-container">
+
+            <div class="sodaCompanies-currency">
+                You have ${{ format(player.money)}}
+            </div>
+
+            <div class="vendingMachines-currency">
+                You have {{ format(player.soda)}} soda
+            </div>
+
+            <div class="endorsements-currency">
+                You have {{ format(player.endorsementsCurrency)}} endorsements
+            </div>
+
+        </div>
+
+        <div class="producers-container">
+
+            <div class="generators-container">
+                    <div class="generator sodaCompanies-generator" v-for="generator in player.sodaCompanies">
+                        <generator :generator="generator"/>
+                    </div>
+                    <add-generator-button target="sodaCompanies"/>
+            </div>
+
+            <div class="generators-container">
+                    <div class="generator vendingMachines-generator" v-for="generator in player.vendingMachines">
+                        <generator :generator="generator"/>
+                    </div>
+                    <add-generator-button target="vendingMachines"/>
+            </div>
+
+            <div class="generators-container">
+                    <div class="generator endorsements-generator" v-for="generator in player.endorsements">
+                        <generator :generator="generator"/>
+                    </div>
+                    <add-generator-button target="endorsements"/>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+
+
+
+
+<script src="js/vue.js"></script>
+<script src="js/generator.js"></script>
+<script src="js/components/generator.js"></script>
+<script src="js/components/add-generator-button.js"></script>
+
+<script src="js/player.js"></script>
+<script src="js/format.js"></script>
+<script src="js/loop.js"></script>
+<script src="js/index.js"></script>
+
+
+
+</html>
