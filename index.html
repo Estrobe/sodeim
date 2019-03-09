@@ -71,6 +71,15 @@ body {
     padding: 10px 40px;
     text-decoration: none; 
     transition: background .5s;
+}
+#savebtn {
+    color: #F9f7f3;
+    background: #0FA3B1 ;
+    padding: 10px 40px;
+    text-decoration: none; 
+    transition: background .5s;
+    float: right;
+    margin-right: 20px;
 }</style>
 <body>
     
@@ -119,6 +128,7 @@ body {
 
 
     </div>
+<button id="savebtn" onclick="cookiefn()">Save</button>
 
 </body>
 
@@ -137,6 +147,11 @@ body {
 <script src="js/loop.js"></script>
 <script src="js/index.js"></script>
 
-
+<script>
+function cookiefn() {
+    document.cookie="cookiename=Cookiezi";
+    console.log("Saved cookie successfully")
+}
+</script>
 
 </html>
